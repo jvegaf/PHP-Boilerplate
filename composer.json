@@ -4,7 +4,18 @@
       "Lavegui\\ApplicationName\\": "src/"
     }
   },
+  "autoload-dev": {
+    "psr-4": {
+      "Lavegui\\AppliationName\\Test\\": "test/"
+    }
+  },
   "require": {
     "php": "^7.3"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^8"
+  },
+  "scripts": {
+    "test": "phpunit --configuration phpunit.xml"
   }
 }
