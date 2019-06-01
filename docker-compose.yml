@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+
+  mysql:
+    image: mariadb
+    container_name: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+    ports:
+      - 3306:3306
+
+  php-7.3-apache:
+    image: php-7.3-apache
+    container_name: php-7.3-apache
+    environment:
+      - XDEBUG_CONFIG="remote_host=192.168.1.130"
+      - PHP_IDE_CONFIG="serverName=PHPServer"
+    volumes:
+      - .:/var/www/html
+    ports:
+      - 8080:80
