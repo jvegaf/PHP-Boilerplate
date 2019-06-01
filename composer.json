@@ -1,0 +1,10 @@
+{
+  "autoload": {
+    "psr-4": {
+      "Lavegui\\ApplicationName\\": "src/"
+    }
+  },
+  "require": {
+    "php": "^7.3"
+  }
+}
