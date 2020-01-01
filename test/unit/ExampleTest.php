@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace Lavegui\AppliationName\Test\unit;
+namespace AppliationName\Test\unit;
 
-use Lavegui\ApplicationName\Example;
+use ApplicationName\Example;
 use PHPUnit\Framework\TestCase;
 
 class ExampleTest extends TestCase

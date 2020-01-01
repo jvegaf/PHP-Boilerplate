@@ -19,9 +19,9 @@ RUN curl -fsSL 'https://xdebug.org/files/xdebug-2.7.2.tgz' -o xdebug.tar.gz \
 
 RUN docker-php-ext-install pdo_mysql
 
-RUN echo 'xdebug.remote_host=192.168.1.130' >> /usr/local/etc/php/php.ini
+RUN echo 'xdebug.remote_host=host.docker.internal' >> /usr/local/etc/php/php.ini
 RUN echo 'xdebug.remote_enable=1' >> /usr/local/etc/php/php.ini
-RUN echo 'xdebug.remote_port=9001' >> /usr/local/etc/php/php.ini
+RUN echo 'xdebug.remote_port=9000' >> /usr/local/etc/php/php.ini
 
 RUN sed -i -e 's/DocumentRoot \/var\/www\/html/DocumentRoot \/var\/www\/html\/public/g' /etc/apache2/sites-available/000-default.conf
 
