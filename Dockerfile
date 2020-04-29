@@ -1,9 +1,9 @@
-FROM php:7.3-apache
+FROM php:7.4.5-apache
 
 RUN apt-get update && \
     apt-get install git unzip -y
 
-RUN curl -fsSL 'https://xdebug.org/files/xdebug-2.7.2.tgz' -o xdebug.tar.gz \
+RUN curl -fsSL 'https://xdebug.org/files/xdebug-2.9.5.tgz' -o xdebug.tar.gz \
     && mkdir -p xdebug \
     && tar -xf xdebug.tar.gz -C xdebug --strip-components=1 \
     && rm xdebug.tar.gz \
